@@ -8,17 +8,20 @@ class SiteController extends Controller
 {
     public function index(){
 
-        $nome = "Jorge";
-        $sobrenome = "Mendes";
 
-
-        $dados = [
-            'nome' => $nome,
-            'sobrenome' => $sobrenome,
+        $computador = [
+            'pecas' => [
+                'hd',
+                'memoria',
+                'processador',
+                'placaMae',
+                'gabinete',
+                'gravador'
+            ]
 
         ];
 
-        return view('bemvindo', $dados);
+        return view('bemvindo', $computador);
     }
     public function exit(){
 

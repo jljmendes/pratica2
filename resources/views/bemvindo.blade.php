@@ -7,9 +7,8 @@
     <title>Bem vindo</title>
 </head>
 <body>
-    <h1>Seja Bem Vindo, {{ $nome }} {{ $sobrenome }}</h1>
-    @for($i = 0; $i <= 10; $i++)
-        <p>O valor de I é: {{ $i }}</p>
-    @endfor
+    @foreach ($pecas as $peca )
+        <p>{{ $peca }}</p>
+    @endforeach
 </body>
 </html>
