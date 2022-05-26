@@ -8,7 +8,11 @@
 </head>
 <body>
     @foreach ($pecas as $peca )
-        <p>{{ $peca }}</p>
+        <p>{{ $peca }} -
+            @component('components.botao')
+
+            @endcomponent
+        </p>
     @endforeach
 </body>
 </html>
