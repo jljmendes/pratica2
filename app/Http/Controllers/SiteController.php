@@ -9,30 +9,42 @@ class SiteController extends Controller
     public function index(){
 
 
-        $computador = [
-            'pecas' => [
-                'hd',
-                'memoria',
-                'processador',
-                'placaMae',
-                'gabinete',
-                'gravador'
-            ]
+        $pessoas = [
+            [
+                'image' => 'https://i.pravatar.cc/150?img='.rand(0,50),
+                'nome' => 'Jorge',
+                'birth' => '24/04/1980',
+                'idade' => 42],
 
+              [
+                'image' => 'https://i.pravatar.cc/150?img='.rand(0,50),
+                'nome' => 'Guilherme',
+                'birth' => '19/03/1999',
+                'idade' => 13],
+
+              [
+                'image' => 'https://i.pravatar.cc/150?img='.rand(0,50),
+                'nome' => 'Gleice',
+                'birth' => '12/11/1992',
+                'idade' => 29]
         ];
 
-        return view('bemvindo', $computador);
+        $dados['pessoas'] = $pessoas;
+
+        return view('bemvindo', $dados);
+
     }
-    public function exit(){
 
-        return view('sair');
-    }
-    public function users(Request $r){
+    public function exercicio2() {
 
-        $data = [
-            'quantidade' =>$r->qtd
-        ];
+        $numero = 1;
 
-        return view('usuarios', $data);
+
+        $url = 'https://i.pravatar.cc/150?img='.$numero;
+
+
+        $dados['url'] = $url;
+
+        return view('exercise', $dados);
     }
 }
