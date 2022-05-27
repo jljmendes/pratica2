@@ -7,27 +7,25 @@
     <title>Bem vindo</title>
 </head>
 <body>
-    @foreach ($pecas as $peca )
-        <p>{{ $peca }} -
-            @component('components.botao')
-                @slot('href')
-                    http://uol.com.br
-                @endslot
-                @slot('cor')
-                    blue
-                @endslot
-            Editar
-            @endcomponent
-            @component('components.botao')
-            @slot('href')
-                    http://msn.com.br
-                @endslot
-                @slot('cor')
-                    red
-                @endslot
-            Deletar
-            @endcomponent
-        </p>
+    <div style="display: flex;
+                flex-direction: row">
+    @foreach ($pessoas as $p )
+
+        @component('components.avatar')
+            @slot('image')
+                {{ $p['image'] }}
+            @endslot
+            @slot('nome')
+                {{ $p['nome'] }}
+            @endslot
+            @slot('idade')
+                {{ $p['idade'] }}
+            @endslot
+            @slot('birth')
+                {{ $p['birth'] }}
+            @endslot
+        @endcomponent
     @endforeach
+</div>
 </body>
 </html>
