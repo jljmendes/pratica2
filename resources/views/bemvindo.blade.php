@@ -10,7 +10,22 @@
     @foreach ($pecas as $peca )
         <p>{{ $peca }} -
             @component('components.botao')
-
+                @slot('href')
+                    http://uol.com.br
+                @endslot
+                @slot('cor')
+                    blue
+                @endslot
+            Editar
+            @endcomponent
+            @component('components.botao')
+            @slot('href')
+                    http://msn.com.br
+                @endslot
+                @slot('cor')
+                    red
+                @endslot
+            Deletar
             @endcomponent
         </p>
     @endforeach
