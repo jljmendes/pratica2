@@ -14,14 +14,15 @@
         justify-content: space-between;
         "
     >
-        @for($i=0;$i<50;$i++)
+        @for($i = 0; $i < 50; $i++)
             <div style="
             width: 150px;
             height: 150px;
             ">
 
-            <img src="{{$url.$i}}" />
-
+            <img src="https://i.pravatar.cc/150?img={{ $i }}" >
+            {{-- <img src="{{$url.$i}}" /> --}}
+            {{-- "https://i.pravatar.cc/150?img={{ $i }}" --}}
             </div>
         @endfor
     </div>
