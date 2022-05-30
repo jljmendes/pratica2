@@ -11,7 +11,7 @@
                 flex-direction: row">
     @foreach ($pessoas as $p )
 
-        @component('components.avatar')
+        {{-- @component('components.avatar')
             @slot('image')
                 {{ $p['image'] }}
             @endslot
@@ -24,7 +24,8 @@
             @slot('birth')
                 {{ $p['birth'] }}
             @endslot
-        @endcomponent
+        @endcomponent --}}
+        @include('components.avatar',$p)
     @endforeach
 </div>
 </body>
