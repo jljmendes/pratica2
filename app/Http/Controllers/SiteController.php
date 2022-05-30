@@ -47,4 +47,8 @@ class SiteController extends Controller
 
         return view('exercise', $dados);
     }
+
+    public function index2(){
+        return view('include');
+    }
 }
