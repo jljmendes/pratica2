@@ -51,4 +51,8 @@ class SiteController extends Controller
     public function index2(){
         return view('include');
     }
+
+    public function layout(){
+        return view('site');
+    }
 }
