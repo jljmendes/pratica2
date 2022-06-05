@@ -55,4 +55,8 @@ class SiteController extends Controller
     public function layout(){
         return view('site');
     }
+
+    public function layout2(){
+        return view('layout2');
+    }
 }
